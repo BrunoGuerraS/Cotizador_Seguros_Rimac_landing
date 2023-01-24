@@ -6,9 +6,14 @@ import {
     AccordionPanel,
     AccordionIcon,
 } from '@chakra-ui/react'
+import { useState } from 'react'
 import icon1 from '../../../../../assets/icon1.svg'
 
 export default function PlusPlan() {
+    const [value, setValue] = useState()
+    const change = (e) => {
+        console.log('me precionaron')
+    }
     return (
         <Container p={''}>
 
@@ -26,6 +31,8 @@ export default function PlusPlan() {
                         m={'0 0 15px 0'}>
                         <Text>Poliza Bronce</Text>
                         <Switch
+                            onChange={change}
+                          
                             colorScheme='green'
                             size='lg' />
                     </Box>
